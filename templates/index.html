@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Paranormal Sitings</title>
+
+    <!-- Boostrap Stylesheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Our own CSS stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'styles.css') }}" media="screen">
+
+  </head>
+
+  <body>
+    <!-- Start of navbar -->
+    <div class="container">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://127.0.0.1:5000/">Home</a>
+          <a class="navbar-brand" href="http://127.0.0.1:5000/bystate/">States</a>
+          <a class="navbar-brand" href="http://127.0.0.1:5000/map/">Map</a>
+          <a class="navbar-brand" href="http://127.0.0.1:5000/overtime/">Years</a>
+        </div>
+      </div><!-- /.container-fluid -->
+    </nav>  
+  </div>  
+    <!-- End of navbar -->
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="display-4">Summary:</h1>
+        <p class="lead"></p>
+      </div>
+    </div>
+    <!-- Start of container -->
+    <div class="container">
+          <!-- Start of Visualizations imageNav Area -->
+          <!-- End of the Visualizations imageNav Area -->
+    </div>
+    <!-- End of container -->
+
+    <!-- jQuery CDN -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <!-- Bootstrap CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+
+</html>

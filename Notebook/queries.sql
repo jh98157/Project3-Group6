@@ -1,12 +1,12 @@
 CREATE TABLE haunted (
-rank INT PRIMARY KEY,
+rank varchar,
 city text,
 country text,
 description text,
 location text,
 state text,
-longitude bigint,
-latitude bigint
+longitude varchar,
+latitude varchar
 );
 
 CREATE TABLE ufos (
@@ -16,15 +16,17 @@ city text,
 state text,
 shape text,
 date_time date,
-longitude bigint,
-latitude bigint
+longitude varchar,
+latitude varchar
 );
+
+
 
 CREATE TABLE bigfoot (
 title text,
-classificatioin text,
+classification text,
 timestamp date,
-longitude bigint,
-latitude bigint
+longitude varchar,
+latitude varchar
 );
 
