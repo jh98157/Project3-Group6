@@ -14,10 +14,10 @@ def index():
 def data():
     return render_template('map.html')
 @app.route("/bystate/")
-def comparison():
+def state():
     return render_template('bargraph.html')
 @app.route("/overtime/")
-def cloudiness():
+def year():
     return render_template('linegraph.html')
 
 

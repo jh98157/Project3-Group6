@@ -35,7 +35,7 @@ html, body{
 
 #map-container{
 
-    padding-top:120px;
+    padding-top:2000px;
     padding-left:10px;
 
 }
@@ -45,6 +45,6 @@ html, body{
     position: relative;
     border: 1px solid black;
     border-radius: 8px;
-    height: 400px;   
+    height: 1000px;   
     width: 100%;  
   }
