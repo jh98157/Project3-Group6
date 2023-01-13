@@ -1,0 +1,70 @@
+﻿{
+    "var" "data",
+    "=" [
+        {
+            "values": [ 103, 440, 1355, 2403, 2077, 8242, 36303, 44047 ],
+            "labels": [ 1940, 1950, 1960, 1970, 1980, 1990, 2000, 2010 ],
+            "domain": { "column": 0 },
+            "name": "UFO",
+            "hoverinfo": "label+percent+name",
+            "hole": ".4",
+            "type": "pie"
+        },
+        {
+            "values": [ 27, 11, 25, 8, 1, 3, 25 ],
+            "labels": [ "US", "China", "European Union", "Russian Federation", "Brazil", "India", "Rest of World" ]
+            "text": "Big Foot Sightings"
+            "textposition": "inside",
+            "domain": { "column": 1 },
+            "name": "BigFoot",
+            "hoverinfo": "label+percent+name",
+            "hole": ".4",
+            "type": "pie"
+        }
+    ]
+    ";",
+
+    "var",
+    "layout" "=",
+    {
+        "title": "UFO and Bigfoot Sightings by Year",
+        "annotations": [
+            {
+                "font": {
+                    "size": 20
+                },
+                "showarrow": false,
+                "text": "UFO",
+                "x": 0.17,
+                "y": 0.5
+            },
+            {
+                "font": {
+                    "size": 20
+                },
+                "showarrow": false,
+                "text": "BigFoot",
+                "x": 0.82,
+                "y": 0.5
+            }
+        ],
+        "height": 400,
+        "width": 600,
+        "showlegend": false,
+        "grid": {
+            "rows": 1,
+            "columns": 2
+        }
+    }
+    ";",
+
+    "Plotly.newPlot('myDiv'",
+    "data",
+    "layout);"
+
+        <div id="plot"></div>
+          <script src="plots.js"></script>
+
+
+}
+
