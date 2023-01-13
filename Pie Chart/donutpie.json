@@ -11,9 +11,9 @@
             "type": "pie"
         },
         {
-            "values": [ 27, 11, 25, 8, 1, 3, 25 ],
-            "labels": [ "US", "China", "European Union", "Russian Federation", "Brazil", "India", "Rest of World" ]
-            "text": "Big Foot Sightings"
+            "values": [ 41, 102, 437, 442, 562, 1675, 878 ],
+            "labels": [ 1950, 1960, 1970, 1980, 1990, 2000, 2010 ],
+            "text": "Big Foot Sightings",
             "textposition": "inside",
             "domain": { "column": 1 },
             "name": "BigFoot",
