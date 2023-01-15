@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- Add a title here -->
-    <title>Sitings Overtime</title>
+    <title>Sitings by State</title>
     <!-- Boostrap Stylesheet -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Our own CSS stylesheet -->
-    <link rel="stylesheet" href="/assets/css/styles.css" media="screen">
-
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'styles.css') }}" media="screen">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
   </head>
 
   <body>
@@ -85,12 +84,13 @@
     </div>
 
     <!-- End of container -->
-
-    <!-- jQuery CDN -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-
-    <!-- Bootstrap CDN -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  </body>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='/js/lineplot.js')}}"></script>
+  
+      <!-- Bootstrap CDN -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </body>
+  
 
 </html>
