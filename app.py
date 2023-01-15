@@ -17,7 +17,7 @@ def data():
 @app.route("/bystate/")
 def state():
     return render_template('bargraph.html')
-@app.route("/overtime/")
+@app.route("/comparisons/")
 def year():
     return render_template('linegraph.html')
 

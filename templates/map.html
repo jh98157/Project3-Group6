@@ -16,18 +16,12 @@
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
     integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
     crossorigin=""></script>
-
-    <!-- Marker cluster JavaScript code -->
-    <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
-
+    <!-- Leaflet heatmap plugin-->
+    <script type="text/javascript" src="static/js/leaflet-heat.js"></script>
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
     integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
     crossorigin="" />
-    
-    <!-- Marker cluster CSS -->
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css">
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css">
 
     <!-- Our own CSS stylesheet -->
     <link rel="stylesheet" href="{{url_for('static', filename='/css/styles.css')}}" media="screen">
@@ -48,7 +42,9 @@
         <div class="navbar-header">
           <a class="navbar-brand" href="http://127.0.0.1:5000/">Home</a>
           <a class="navbar-brand" href="http://127.0.0.1:5000/map/">Map</a>
-          <a class="navbar-brand" href="http://127.0.0.1:5000/bystate/">Graphs</a>
+          <a class="navbar-brand" href="http://127.0.0.1:5000/bystate/">States</a>
+          <a class="navbar-brand" href="http://127.0.0.1:5000/comparisons/">Comparisons</a>
+
         </div>
     
       
@@ -85,9 +81,8 @@
 
     <!-- Bootstrap CDN -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+    <script type="text/javascript" src="../static/js/leaflet-heat.js"></script>
     <script type="text/javascript" src="{{url_for('static', filename='/js/maplogic.js')}}"></script>
-
   </body>
 
 </html>

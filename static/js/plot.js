@@ -70,57 +70,11 @@ function buildCharts(id) {
           type: 'bar'
         };
         var Layout = {
-          bartype: "group"
+          bartype: "group",
+          plot_bgcolor:"rgba(0,0,0,0)",
+          paper_bgcolor:"rgba(0,0,0,0)",
         }
         var bg = [t1,t2,t3]
         Plotly.newPlot("bar2",bg,Layout);
         });
 }
-
-let lineTitle = `Reports Line Chart`
-
-let Decades = [1940,1950,1960,1970, 1980, 1990, 2000, 2010]
-
-let Reports = [103,440,1355,2403,2077,8242,36303,44047]
-
-let BigDecades = [1950,1960,1970, 1980, 1990, 2000, 2010]
-
-let BigReports = [41,102,437,442,562,1675,878]
-
-let trace1 = {
-  x: Decades,
-  y: Reports,
-  name: 'UFOS',
-  type: 'line'
-};
-
-let trace2 = {
-  x: BigDecades,
-  y: BigReports,
-  name: 'Bigfoot',
-  type: 'line'
-};
-let trace3 = {
-  x: [1990, 1990],
-  y: [0,50000],
-  name: 'Creation of Military Drone',
-  type: 'line'
-};
-let trace4 = {
-  x: [2000, 2000],
-  y: [0,50000],
-  name: 'FDA Commerical Drone License ',
-  type: 'line'
-};
-
-
-let graphs = [trace1,trace2,trace3,trace4];
-
-
-let layout = {
-  title: lineTitle,
-  yaxis: {range: [0, 47000]},
-}
-
-Plotly.newPlot("line", graphs, layout);
-

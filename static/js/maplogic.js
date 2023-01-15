@@ -12,28 +12,64 @@ var baseMaps = {
   "Street Map": street,
   "Topographic Map": topo
 };
+
+var bigfootMarkerOptions = {
+  radius: 20000,
+  fillColor: "brown",
+  color: "brown",
+  weight: 1,
+  opacity: 1,
+  fillOpacity: 0.6
+};
+
+var ufoMarkerOptions = {
+  radius: 20000,
+  fillColor: "green",
+  color: "green",
+  weight: 1,
+  opacity: 1,
+  fillOpacity: 0.6
+};
+var hauntedMarkerOptions = {
+  radius: 20000,
+  fillColor: "white",
+  color: "white",
+  weight: 1,
+  opacity: 1,
+  fillOpacity: 0.6
+};
+
 var bigfootLayer = new L.LayerGroup();
 
 d3.json("/api/bigfoot.json").then(function(data) {
   L.geoJSON(data, {
+    pointToLayer: function (feature, latlng) {
+      return L.circle(latlng, bigfootMarkerOptions);
+  },
     onEachFeature: function(feature, layer) {
-      layer.bindPopup("<h1> Info </h1> <h2> " + feature.properties.title);
+      layer.bindPopup("<h1> Summary </h1> <h2> " + feature.properties.title);
       }
   }).addTo(bigfootLayer)});
 
 var ufoLayer = new L.LayerGroup(); 
 d3.json("/api/UFO.json").then(function(data) {
   L.geoJSON(data, {
+    pointToLayer: function (feature, latlng) {
+      return L.circle(latlng, ufoMarkerOptions);
+  },
     onEachFeature: function(feature, layer) {
-      layer.bindPopup("<h1> Magnitude: </h1> <h2> " + feature.properties.summary);
+      layer.bindPopup("<h1> Summary: </h1> <h2> " + feature.properties.summary);
       }
   }).addTo(ufoLayer)})
 
 var houseLayer = new L.LayerGroup(); 
 d3.json("/api/haunted.json").then(function(data) {
   L.geoJSON(data, {
+    pointToLayer: function (feature, latlng) {
+      return L.circle(latlng, hauntedMarkerOptions);
+  },
     onEachFeature: function(feature, layer) {
-      layer.bindPopup("<h1> Magnitude: </h1> <h2> " + feature.properties.summary);
+      layer.bindPopup("<h1> Summary: </h1> <h2> " + feature.properties.description);
       }
   }).addTo(houseLayer)})
 //   // Create an overlay object to hold our overlay.
@@ -48,6 +84,7 @@ var myMap = L.map("map", {
     37.09, -95.71
   ],
   zoom: 5,
+  preferCanvas: true,
   layers: [street]
 });
 

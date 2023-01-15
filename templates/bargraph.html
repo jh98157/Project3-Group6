@@ -24,7 +24,8 @@
         <div class="navbar-header">
           <a class="navbar-brand" href="http://127.0.0.1:5000/">Home</a>
           <a class="navbar-brand" href="http://127.0.0.1:5000/map/">Map</a>
-          <a class="navbar-brand" href="http://127.0.0.1:5000/bystate/">Graphs</a>
+          <a class="navbar-brand" href="http://127.0.0.1:5000/bystate/">States</a>
+          <a class="navbar-brand" href="http://127.0.0.1:5000/comparisons/">Comparisons</a>
         </div>
     
                <!-- Collect the nav links, forms, and other content for toggling -->
@@ -52,7 +53,7 @@
         <div id="bar2" style="background-color:#d3d3d3;"></div>
       </div>
     </div>
-    <div class="row">
+    <div class="row jumbotron">
       <div class="col-md-3">
         <div class="well">
           <h5>State Selector:</h5>
@@ -60,19 +61,16 @@
         </div>
         <div class="panel panel-primary">
           <div class="panel-heading">
-            <!-- <h3 class="panel-title">Demographic Info</h3> -->
-          </div>
+        </div>
           <div id="sample-metadata" class="panel-body"></div>
         </div>
       </div>
       <div class="col-md-9">
-        <div id="bar" style="background-color:#d3d3d3;"></div>
+        <div id="bar" style="object-fit: fill;"></div>
       </div>
-        <div class="col-md-12">
-          <div id="line" style="background-color:#d3d3d3;"></div>
-        </div>
     </div>
   </div>
+  
 </div>
 </div>
   <script src="https://d3js.org/d3.v5.min.js"></script>
