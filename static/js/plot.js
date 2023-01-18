@@ -1,7 +1,7 @@
 // function init(){
 var selector = d3.select("#selDataset");
 
-d3.json('/api/sitings2.json').then(data => {
+d3.json('/api/sitings2').then(data => {
 console.log(data)
   Object.keys(data).forEach((place) => {
       selector
@@ -11,7 +11,7 @@ console.log(data)
     });
 
    buildCharts(Object.keys(data)[0]);
-  //  console.log(Object.keys(data)[0]);
+   console.log(Object.keys(data)[0]);
 })
 // };
 
@@ -22,7 +22,7 @@ function optionChanged(id){
 };
 
 function buildCharts(id) {
-    d3.json("/api/sitings2.json").then((data) => {
+    d3.json("/api/sitings2").then((data) => {
       let stateData = data[id]
       // let resultArray = data.filter(stateObj => stateObj.id == id);
       // let results = resultArray

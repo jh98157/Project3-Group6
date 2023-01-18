@@ -1,8 +1,19 @@
 from flask import Flask, render_template, jsonify
 import json
+import pandas as pd
+from sqlalchemy import create_engine
+
 app = Flask(__name__)
 
-
+protocol = 'postgresql'
+username = 'postgres'
+password = 'postgres'
+host = 'localhost'
+port = 5432
+database_name = 'paranormal_db'
+rds_connection_string = f'{protocol}://{username}:{password}@{host}:{port}/{database_name}'
+engine = create_engine(rds_connection_string)
+app = Flask(__name__)
 #################################################
 # Flask Routes
 #################################################
@@ -33,10 +44,12 @@ def sitings():
     file.close()
     return jsonify(data)
 
-@app.route("/api/sitings2.json")
+@app.route("/api/sitings2")
 def sitings2():
 
-    file = open('data/sitings2.json','r')
+    sitings = pd.read_sql_query("select state, bigfoot_sitings, reported_hauntings, ufo_sitings from states", con=engine)
+    pd.DataFrame(sitings).set_index('state').T.to_json('data/info.json')
+    file = open('data/info.json','r')
     
     data = json.load(file)
     file.close()
